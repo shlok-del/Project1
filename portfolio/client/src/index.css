@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-200 bg-[#111218] selection:bg-primary/30 selection:text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/[0.08] shadow-2xl;
+  }
+
+  .glass-morphism {
+    @apply bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border border-white/10;
+  }
+
+  .terminal-button {
+    @apply relative overflow-hidden font-mono text-sm tracking-wider uppercase px-6 py-3 transition-all duration-300;
+  }
+
+  .terminal-button::before {
+    content: '> ';
+    @apply text-primary opacity-0 -ml-2 transition-all duration-300;
+  }
+
+  .terminal-button:hover::before {
+    @apply opacity-100 ml-0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800/50 rounded-full hover:bg-primary/50 transition-colors;
+}
+
+/* ── Technical Aesthetic ─────────────────────────────────── */
+.font-mono {
+  font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* Grid Background Overlay */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Sticker highlight effect */
+.sticker-glow {
+  filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.3));
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 8px rgba(177, 83, 15, 0.5), 0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+/* Scanline animation */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanline-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(249, 115, 22, 0.05) 50%, transparent);
+  height: 100px;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
