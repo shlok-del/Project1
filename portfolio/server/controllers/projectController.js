@@ -56,7 +56,7 @@ const createProject = async (req, res, next) => {
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { title, description, tech_stack, github_url, live_url, image_url, featured } = req.body;
+    const { title, description, tech_stack, github_url, live_url, image_url, report_url, featured } = req.body;
 
     const { data: project, error } = await supabase
       .from('projects')
@@ -68,6 +68,7 @@ const createProject = async (req, res, next) => {
           github_url,
           live_url,
           image_url,
+          report_url,
           featured,
         },
       ])

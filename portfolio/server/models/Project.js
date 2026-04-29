@@ -31,6 +31,10 @@ const Project = sequelize.define('Project', {
     type: DataTypes.STRING(255),
     allowNull: true
   },
+  report_url: {
+    type: DataTypes.STRING(255),
+    allowNull: true
+  },
   featured: {
     type: DataTypes.BOOLEAN,
     defaultValue: false

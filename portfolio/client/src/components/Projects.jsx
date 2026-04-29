@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, ExternalLink, Star, ArrowRight, Layers } from 'lucide-react';
+import { Github, ExternalLink, Star, ArrowRight, Layers, FileText } from 'lucide-react';
 import useFetch from '../hooks/useFetch';
 
 const Projects = () => {
@@ -132,6 +132,11 @@ const Projects = () => {
                       {project.live_url && (
                         <a href={project.live_url} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
                           <ExternalLink size={20} />
+                        </a>
+                      )}
+                      {project.report_url && (
+                        <a href={project.report_url} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors" title="Project Report">
+                          <FileText size={20} />
                         </a>
                       )}
                     </div>

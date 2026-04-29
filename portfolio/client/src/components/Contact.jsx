@@ -76,7 +76,7 @@ const Contact = () => {
 
               <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-5">Social Profiles</h4>
               <div className="flex space-x-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-black/40 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-black transition-all duration-300 shadow-sm border border-white/5 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(255,255,255,0.2)]">
+                <a href="https://github.com/shlok-del" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-black/40 rounded-full flex items-center justify-center text-gray-400 hover:bg-white hover:text-black transition-all duration-300 shadow-sm border border-white/5 hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(255,255,255,0.2)]">
                   <Github size={24} />
                 </a>
                 <a href="https://www.linkedin.com/in/shlok-katare-722388334/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-black/40 rounded-full flex items-center justify-center text-gray-400 hover:bg-[#0A66C2] hover:text-white transition-all duration-300 shadow-sm border border-white/5 hover:-translate-y-1 hover:border-[#0A66C2] hover:shadow-[0_5px_15px_rgba(10,102,194,0.4)]">

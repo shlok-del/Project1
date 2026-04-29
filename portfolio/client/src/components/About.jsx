@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   const stats = [
-    { value: '5+', label: 'Years Experience' },
-    { value: '40+', label: 'Projects Built' },
-    { value: '15+', label: 'Technologies' },
+    { value: '0', label: 'Years Experience' },
+    { value: '0', label: 'Projects Built' },
+    { value: '10+', label: 'Technologies' },
   ];
 
   return (
@@ -14,27 +14,27 @@ const About = () => {
 
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-          
-          <motion.div 
+
+          <motion.div
             className="w-full md:w-1/2 relative group"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <motion.div 
+            <motion.div
               className="aspect-square max-w-md mx-auto rounded-2xl overflow-hidden relative shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-white/10"
               whileHover={{ scale: 1.02, rotate: 1 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {/* Profile Image */}
-              <img 
-                src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Profile" 
+              <img
+                src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Profile"
                 className="w-full h-full object-cover filter grayscale group-hover:grayscale-[50%] transition-all duration-700"
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl group-hover:ring-primary/50 transition-colors duration-500 shadow-[inset_0_0_20px_rgba(249,115,22,0.2)]"></div>
-              
+
               {/* Overlay Gradient on hover */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay"></div>
             </motion.div>
@@ -42,7 +42,7 @@ const About = () => {
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl -z-10 group-hover:bg-primary/40 group-hover:scale-150 transition-all duration-700 mix-blend-screen"></div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,8 +62,8 @@ const About = () => {
 
             <div className="grid grid-cols-3 gap-4">
               {stats.map((stat, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   className="p-4 bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/5 text-center hover:bg-zinc-800/80 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all cursor-default group"
                   whileHover={{ y: -5 }}
                 >
