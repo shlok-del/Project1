@@ -12,8 +12,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/portfolio/client/dist/$1",
-      "continue": true
+      "destination": "/portfolio/client/dist/$1"
     },
     {
       "source": "/(.*)",
