@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "concurrently 'npm run dev:server' 'npm run dev:client'",
     "dev:server": "cd server && npm run dev",
-    "dev:client": "cd client && npm run dev"
+    "dev:client": "cd client && npm run dev",
+    "build": "npm run build --prefix client"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.104.1",
