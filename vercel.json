@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "portfolio/api/index.js": {
+      "runtime": "vercel-node@latest"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/portfolio/api/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/portfolio/client/dist/$1",
+      "continue": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/portfolio/client/dist/index.html"
+    }
+  ]
+}
