@@ -1,12 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "portfolio/api/index.js": {}
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/portfolio/api/index.js"
+      "destination": "/api/index.js"
     },
     {
       "source": "/(.*)",
