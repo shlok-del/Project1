@@ -34,11 +34,12 @@ const limiter = rateLimit({
 app.use('/api', limiter);
 
 // Routes
-app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'ok' });
+app.get(['/api/health', '/health'], (req, res) => {
+  res.status(200).json({ status: 'ok', environment: process.env.NODE_ENV });
 });
 
-app.use('/api/projects', projectRoutes);
+// Support both prefixed and non-prefixed routes for Vercel
+app.use(['/api/projects', '/projects'], projectRoutes);
 
 // Centralized Error Handling Middleware
 app.use((err, req, res, next) => {
