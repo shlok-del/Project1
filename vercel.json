@@ -1,9 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "portfolio/api/index.js": {
-      "runtime": "vercel-node@latest"
-    }
+    "portfolio/api/index.js": {}
   },
   "rewrites": [
     {
