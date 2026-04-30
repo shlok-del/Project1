@@ -7,11 +7,11 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/dist/$1"
+      "destination": "/portfolio/client/dist/$1"
     },
     {
       "source": "/(.*)",
-      "destination": "/dist/index.html"
+      "destination": "/portfolio/client/dist/index.html"
     }
   ]
 }

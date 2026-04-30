@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd portfolio/client && vite build --outDir ../../dist"
+    "build": "cd portfolio/client && vite build"
   },
   "dependencies": {
     "express": "^4.22.1",
