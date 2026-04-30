@@ -6,7 +6,7 @@ import useFetch from '../hooks/useFetch';
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
-  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  const apiUrl = import.meta.env.VITE_API_URL || '/api';
   const { data: projects, loading, error } = useFetch(`${apiUrl}/projects`);
 
   const filters = ['All', 'Frontend', 'Backend', 'Full-Stack', 'EC'];

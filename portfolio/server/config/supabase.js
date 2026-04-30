@@ -7,8 +7,7 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-  console.error('Missing Supabase credentials in server/.env');
-  process.exit(1);
+  console.warn('⚠️ Supabase credentials missing. Database features will fail.');
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);

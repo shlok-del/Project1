@@ -5,7 +5,7 @@ import useFetch from '../hooks/useFetch';
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  const apiUrl = import.meta.env.VITE_API_URL || '/api';
   const { data: project, loading, error } = useFetch(`${apiUrl}/projects/${id}`);
 
   if (loading) {
